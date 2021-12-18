@@ -13,9 +13,8 @@ Thumbs.db
 *.iml
 .idea
 .git_with_virtual_venv.sh
+
 # Python files
-## virtual env files
 venv*
 .python-version
-
 __pycache__
