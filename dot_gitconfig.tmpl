@@ -10,6 +10,9 @@
 
 [includeIf "gitdir:~/Documents/Personal/**"] 
     path = .config/git/gitconfig-personal
+
+[includeIf "gitdir:~/.local/share/chezmoi/**"] 
+    path = .config/git/gitconfig-personal
 {{ else }}
     path = .config/git/gitconfig-personal
 {{ end }}
