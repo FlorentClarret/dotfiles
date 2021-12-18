@@ -4,12 +4,16 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 
-[user]
-	name = Florent Clarret
-	email = florent.clarret@datadoghq.com
+
+{{ if (eq .chezmoi.hostname "COMP-C02G70X8ML87") }}
+[include]
+    path = .config/git/gitconfig-datadog
 
 [includeIf "gitdir:~/Documents/Personal/**"] 
     path = .config/git/gitconfig-personal
+{{ else }}
+    path = .config/git/gitconfig-personal
+{{ end }}
 
 [core]
     autocrlf = input
