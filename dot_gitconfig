@@ -1,0 +1,73 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[user]
+	name = Florent Clarret
+	email = florent.clarret@datadoghq.com
+
+[includeIf "gitdir:~/Documents/Personal/**"] 
+    path = .config/git/gitconfig-personal
+
+[core]
+    autocrlf = input
+    editor = vim
+    tool = vimdiff
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.config/git/gitignore
+
+[alias]
+    i = init
+    c = clone
+
+    st = status
+
+    ci = commit
+    cim = commit -m
+    ca = commit --amend
+
+    a = add
+    aa = add .
+    
+    ch = checkout
+    br = branch
+    mr = merge
+    pl = pull
+    pr = pull --rebase
+    rb = rebase
+    ps = push
+    ft = fetch
+
+    unstage = reset HEAD --
+    
+    last = log -1 HEAD
+    qlog = log --pretty=oneline --abbrev-commit --graph --decorate
+    
+    di = diff
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+    
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    # list ignored files
+    li = ls-files --other --ignored --exclude-standard
+
+    rmc = rm --cached
+
+    sa = stash
+    sap = stash pop
+    sal = stash list
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[branch]  
+    autosetuprebase = always
+
+[push]
+    default = matching
