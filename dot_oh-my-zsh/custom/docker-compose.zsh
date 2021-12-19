@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-alias dc="docker-compose"
+alias dkc="docker-compose"
