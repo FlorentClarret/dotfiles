@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 ## Fetch hostname from .ssh/config and create an alias to connect to them
 if [[ -f ~/.ssh/config ]]; then
