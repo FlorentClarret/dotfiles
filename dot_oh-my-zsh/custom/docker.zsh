@@ -8,5 +8,7 @@ alias dkps="docker ps"
 alias dkpsa="docker ps -a"
 # Get images
 alias dki="docker images"
+# Stop all containers
+alias dkstp='docker stop $(docker ps -a -q)'
 # Stop and Remove all containers
 alias dkrmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
