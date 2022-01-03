@@ -1,4 +1,4 @@
 [submodule "dot_vim_runtime"]
 	path = dot_vim_runtime
-	url = https://github.com/amix/vimrc.git
+	url = git@github.com:FlorentClarret/vimrc.git
     shallow = true
