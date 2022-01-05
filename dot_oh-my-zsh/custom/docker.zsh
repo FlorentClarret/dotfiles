@@ -12,3 +12,7 @@ alias dki="docker images"
 alias dkstp='docker stop $(docker ps -a -q)'
 # Stop and Remove all containers
 alias dkrmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+# Run interactive shell
+dkexec() {
+    docker exec -it "$1" ${2:-/bin/bash}
+}
