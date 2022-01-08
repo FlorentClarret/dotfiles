@@ -23,6 +23,7 @@
     tool = vimdiff
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     excludesfile = ~/.config/git/gitignore
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [alias]
     i = init
@@ -71,9 +72,28 @@
     diff = auto
     status = auto
     branch = auto
+    ui = true
+
+[color "diff-highlight"]
+	oldHighlight = red bold 52
+	oldNormal = red bold
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [branch]
     autosetuprebase = always
 
 [push]
     default = matching
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
