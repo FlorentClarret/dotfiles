@@ -1,16 +1,16 @@
 #!/bin/bash
 
+PORT="58000"
+
 usage() {
 	echo "./cyberchef.sh: "
 	echo -e "\tThis script starts a docker container for cyberchef"
 	echo "Parameters: "
-	echo -e "\t-p|--port: The port you want to use. Default to 8002"
+	echo -e "\t-p|--port: The port you want to use. Default to $PORT"
 	echo -e "\t-h|--help: Show this usage"
 }
 
 # ================================== Main ==================================
-
-PORT="58000"
 
 POSITIONAL=()
 while [[ $# -gt 0 ]]; do
