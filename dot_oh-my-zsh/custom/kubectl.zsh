@@ -2,6 +2,7 @@
 
 alias k='kubectl'
 
+alias kci='kubectl cluster-info'
 alias kex='kubectl exec -i -t'
 alias klog='kubectl logs -f'
 alias kg='kubectl get'
