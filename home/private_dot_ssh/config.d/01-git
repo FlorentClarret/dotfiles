@@ -1,5 +1,14 @@
-Host github.com
-    User git
+Host github
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
+
+Host github-emu
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519-emu
+  IdentitiesOnly yes
 
 Host gitlab.com
     User git
