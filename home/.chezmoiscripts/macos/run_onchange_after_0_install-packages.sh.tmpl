@@ -50,13 +50,14 @@ set -eufo pipefail
       "pip-tools"
       "pulumi/tap/pulumi"
       "shellcheck"
-      "ykman") -}}
+      "ykman"
+      "PeonPing/tap/peon-ping") -}}
 {{   $casks = concat $casks (list
       "aws-vault"
       "notunes") -}}
 {{ end -}}
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
 {{ end -}}
