@@ -1,4 +1,4 @@
-# Agent Development Guidelines
+# Agent Guidelines
 
 ## General Rules
 
