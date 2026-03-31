@@ -1,7 +1,5 @@
 # https://www.gnupg.org/documentation/manuals/gnupg/Agent-Options.html
-{{- if eq .hostname .hostnames.work.intel }}
-pinentry-program /usr/local/bin/pinentry-mac
-{{- else if eq .hostname .hostnames.work.m1 }}
+{{- if eq .hostname .hostnames.work.m4 }}
 pinentry-program /opt/homebrew/bin/pinentry-mac
 {{- end }}
 enable-ssh-support

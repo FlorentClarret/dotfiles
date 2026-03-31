@@ -9,7 +9,7 @@
 {{-   $hostname = $computerName -}}
 {{- end -}}
 
-{{- if eq $hostname "COMP_C02G70X8ML87" "COMP_MWCXH06XC7" -}}
+{{- if eq $hostname "COMP-G1V603QMGK" "COMP_MWCXH06XC7" -}}
 {{-   $personal = false -}}
 {{- end -}}
 
@@ -30,8 +30,7 @@
     work = "florent.clarret@datadoghq.com"
 
 [data.hostnames.work]
-    intel = "COMP_C02G70X8ML87"
-    m1 = "COMP_MWCXH06XC7"
+    m4 = "COMP-G1V603QMGK"
 
 [data.hostnames.perso]
     latitude = "latitude"
@@ -39,9 +38,8 @@
     mac-mini = "mac-mini"
 
 [data.key.work]
-    primary = "C29420BDF9942DF2"  # This is an ID, not a secret.
-    integrations = "725D3843DBD883ED"  # This is an ID, not a secret.
+    primary = "5494EB6E7633A407"  # This is an ID, not a secret.
 
 [data.key.perso]
-    m1 = "8B94B4D5D79286B1"  # This is an ID, not a secret.
+    m4 = "2439CA8C660028F8"  # This is an ID, not a secret.
     helios = "54A1CE47CEB4C83F"  # This is an ID, not a secret.
