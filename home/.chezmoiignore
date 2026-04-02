@@ -9,10 +9,6 @@ README.md
 .finicky.js
 {{ end }}
 
-{{ if ne .hostname .hostnames.perso.helios }}
-.oh-my-zsh/custom/helios.zsh
-{{ end }}
-
 {{ if .personal }}
 .claude
 
