@@ -19,6 +19,9 @@ Host *                  # apply to all hosts
 {{- end }}
 
 {{- if .work }}
+
+Include /Users/florent.clarret/.colima/ssh_config
+
 # BEGIN ANSIBLE MANAGED BLOCK
 Host *
 # IPv4 only for speed
