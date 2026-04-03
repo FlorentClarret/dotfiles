@@ -1,5 +1,7 @@
 [user]
     email = {{ .email.perso }}
-{{ if eq .hostname .hostnames.work.m4 }}
+{{- if eq .hostname .hostnames.work.m4 }}
     signingkey = {{ .key.perso.m4 }}
+{{- else if eq .hostname .hostnames.perso.macbook }}
+    signingkey = {{ .key.perso.macbook }}
 {{ end }}

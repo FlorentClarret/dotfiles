@@ -136,10 +136,10 @@
     autocorrect = 20
 
 [rerere]
-	autoupdate = true
-	enabled = true
+    autoupdate = true
+    enabled = true
 
-{{- if .work }}
+{{ if .work }}
 [include]
     path = .config/git/gitconfig-work.toml
 
@@ -148,7 +148,7 @@
 
 [includeIf "gitdir:~/.local/share/chezmoi/**"]
     path = .config/git/gitconfig-perso.toml
-{{- else }}
+{{ else }}
 [include]
     path = .config/git/gitconfig-perso.toml
-{{- end }}
+{{ end }}
