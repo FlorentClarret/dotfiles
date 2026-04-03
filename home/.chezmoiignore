@@ -6,7 +6,6 @@ README.md
 
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/macos/**
-.finicky.js
 {{ end }}
 
 {{ if .personal }}
