@@ -1,16 +1,16 @@
-Host github
+Host github.com
   Hostname github.com
   User git
-  IdentityFile ~/.ssh/id_rsa
+  {{ if .work }}IdentityFile ~/.ssh/id_rsa{{ else }}IdentityFile ~/.ssh/github{{ end }}
   IdentitiesOnly yes
 
-{{ if .work -}}
+{{ if .work }}
 Host github-emu
   Hostname github.com
   User git
   IdentityFile ~/.ssh/id_ed25519-emu
   IdentitiesOnly yes
-{{- end }}
+{{ end }}
 
 Host gitlab.com
     User git
