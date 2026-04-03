@@ -1,4 +1,4 @@
-{{- $hosts := list "latitude" "router" "mac-mini" "server" "dropbear" -}}
+{{- $hosts := list "latitude" "router" "helios" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 Host {{ . }}
     HostName {{ onepasswordRead  (print "op://network/" . "/url") $.onepassword.perso }}
