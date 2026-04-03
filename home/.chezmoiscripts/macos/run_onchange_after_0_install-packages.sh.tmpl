@@ -9,48 +9,49 @@ set -eufo pipefail
      "defaultbrowser"
      "fzf"
      "gh"
+     "diff-so-fancy"
      "git"
      "glances"
      "gnupg"
      "grep"
      "hmarr/tap/codeowners"
      "jq"
-     "lua"
      "mc"
      "most"
-     "node"
      "pinentry-mac"
-     "pipx"
-     "pre-commit"
      "pv"
      "sapling"
      "screen"
      "ssh-copy-id"
      "tmux"
      "trash"
+     "pre-commit"
      "tree"
      "watch"
-     "withgraphite/tap/graphite"
-     "wget"
-     "youtube-dl" -}}
+     "wget" -}}
 
 {{ $casks := list
      "1password/tap/1password-cli"
      "battery"
-     "finicky"
      "raycast"
      "vlc" -}}
 
 {{ if .work -}}
 {{   $brews = concat $brews (list
       "clang-format"
+      "node"
+      "lua"
       "expect"
       "hatch"
+      "crane"
+      "withgraphite/tap/graphite"
       "kind"
       "pip-tools"
       "pulumi/tap/pulumi"
       "shellcheck"
       "ykman"
+      "pipx"
+      "derailed/k9s/k9s"
       "PeonPing/tap/peon-ping") -}}
 {{   $casks = concat $casks (list
       "aws-vault"

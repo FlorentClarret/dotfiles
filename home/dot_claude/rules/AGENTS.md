@@ -1,8 +1,9 @@
-# Agent Development Guidelines
+# Agent Guidelines
 
 ## General Rules
 
 - When asked to analyze or suggest changes, do NOT edit files unless explicitly asked to. Analysis-only requests should produce only text output.
+- Use American English spelling (e.g., "color" not "colour", "organize" not "organise").
 
 ## Coding style
 

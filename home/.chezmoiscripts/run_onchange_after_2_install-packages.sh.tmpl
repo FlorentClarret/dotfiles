@@ -4,8 +4,11 @@ echo "> Running $(basename "$0") "
 
 set -eufo pipefail
 
-{{ $packages := list
-     "datadog" -}}
+{{ $packages := list -}}
+
+{{ if .work -}}
+{{ $packages = concat $packages (list "datadog") -}}
+{{ end -}}
 
 {{ range ($packages | sortAlpha | uniq) -}}
 pipx install "{{ . }}" --force
