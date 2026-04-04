@@ -10,5 +10,14 @@ alias cdssh='cd ~/.ssh'
 
 {{ if .work -}}
 alias cddd='cd ~/dd'
-alias agent='cd ~/dd/datadog-agent'
+
+## Fetch repositories create an alias to cd to them
+if [[ -d ~/dd ]]; then
+  for dir in $(ls ~/dd/); do
+    if [[ -d ~/dd/$dir ]]; then
+      eval alias "$dir=\"cd ~/dd/$dir\""
+    fi
+  done
+fi
+
 {{ end -}}
