@@ -22,7 +22,10 @@
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-# disable = ["system", "emacs"]
+disable = [
+    "shell",
+    "vim",
+]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
