@@ -7,6 +7,37 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "Apfel",
+      "model": "apple-foundationmodel",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "language_models": {
+    "openai_compatible": {
+      "Apfel": {
+        "api_url": "http://127.0.0.1:11438/v1",
+        "available_models": [
+          {
+            "name": "apple-foundationmodel",
+            "max_tokens": 200000,
+            "max_output_tokens": 4096,
+            "max_completion_tokens": 4096,
+            "capabilities": {
+              "tools": false,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true
+            }
+          }
+        ]
+      }
+    }
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": true
