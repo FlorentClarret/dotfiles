@@ -32,6 +32,9 @@ set -eufo pipefail
      "Arthur-Ficial/tap/apfel"
      "Arthur-Ficial/tap/apfel-clip"
      "Arthur-Ficial/tap/apfel-gui"
+     "colima"
+     "docker"
+     "docker-compose"
      "wget" -}}
 
 {{ $casks := list
@@ -70,3 +73,5 @@ brew "{{ . }}"
 cask "{{ . }}"
 {{ end -}}
 EOF
+
+brew services start colima
