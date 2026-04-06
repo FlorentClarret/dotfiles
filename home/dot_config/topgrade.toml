@@ -25,6 +25,7 @@
 disable = [
     "shell",
     "vim",
+    "containers",
 ]
 
 # Ignore failures for these steps
