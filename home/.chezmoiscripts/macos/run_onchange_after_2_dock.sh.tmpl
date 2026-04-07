@@ -32,4 +32,4 @@ for label in "${remove_labels[@]}"; do
 	dockutil --no-restart --remove "${label}" || true
 done
 
-killall Dock &> /dev/null
+killall Dock &> /dev/null || true
