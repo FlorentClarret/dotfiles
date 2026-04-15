@@ -1,77 +1,10 @@
 #!/bin/bash
 
+# Checksum to trigger brew bundle when packages.yaml changes
+# {{ .packages.macos.brew | toJson | sha256sum }}
+
 echo "> Running $(basename "$0") "
 
 set -eufo pipefail
 
-{{ $brews := list
-     "dockutil"
-     "bat"
-     "defaultbrowser"
-     "fzf"
-     "gh"
-     "diff-so-fancy"
-     "git"
-     "glances"
-     "gnupg"
-     "grep"
-     "hmarr/tap/codeowners"
-     "jq"
-     "mc"
-     "most"
-     "pinentry-mac"
-     "pv"
-     "sapling"
-     "screen"
-     "ssh-copy-id"
-     "tmux"
-     "trash"
-     "pre-commit"
-     "tree"
-     "watch"
-     "topgrade"
-     "Arthur-Ficial/tap/apfel"
-     "Arthur-Ficial/tap/apfel-gui"
-     "colima"
-     "docker"
-     "withgraphite/tap/graphite"
-     "docker-compose"
-     "wget" -}}
-
-{{ $casks := list
-     "1password/tap/1password-cli"
-     "battery"
-     "balenaetcher"
-     "ghostty"
-     "raycast"
-     "vlc" -}}
-
-{{ if .work -}}
-{{   $brews = concat $brews (list
-      "clang-format"
-      "node"
-      "lua"
-      "expect"
-      "hatch"
-      "crane"
-      "kind"
-      "pip-tools"
-      "pulumi/tap/pulumi"
-      "shellcheck"
-      "ykman"
-      "pipx"
-      "derailed/k9s/k9s"
-      "PeonPing/tap/peon-ping") -}}
-{{   $casks = concat $casks (list
-      "aws-vault"
-      "notunes") -}}
-{{ end -}}
-
-brew bundle --file=/dev/stdin <<EOF
-{{ range ($brews | sortAlpha | uniq) -}}
-brew "{{ . }}"
-{{ end -}}
-{{ range ($casks | sortAlpha | uniq) -}}
-cask "{{ . }}"
-{{ end -}}
-EOF
+brew bundle --global

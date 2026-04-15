@@ -1,0 +1,69 @@
+packages:
+  macos:
+    brew:
+      brews:
+        base:
+          - dockutil
+          - bat
+          - defaultbrowser
+          - fzf
+          - gh
+          - diff-so-fancy
+          - git
+          - glances
+          - grep
+          - gnupg
+          - jq
+          - yq
+          - mc
+          - most
+          - pv
+          - screen
+          - ssh-copy-id
+          - tmux
+          - trash
+          - pre-commit
+          - tree
+          - watch
+          - topgrade
+          - Arthur-Ficial/tap/apfel
+          - Arthur-Ficial/tap/apfel-gui
+          - colima
+          - docker
+          - wget
+          - gnu-tar
+        personal:
+          - ffmpeg
+        work:
+          - fx
+          - hmarr/tap/codeowners
+          - pinentry-mac
+          - withgraphite/tap/graphite
+          - clang-format
+          - node
+          - lua
+          - expect
+          - hatch
+          - crane
+          - kind
+          - pip-tools
+          - pulumi/tap/pulumi
+          - shellcheck
+          - ykman
+          - pipx
+          - derailed/k9s/k9s
+          - PeonPing/tap/peon-ping
+          - yamlfmt
+          - kubectl
+      casks:
+        base:
+          - 1password/tap/1password-cli
+          - battery
+          - ghostty
+          - raycast
+        personal:
+          - balenaetcher
+          - vlc
+        work:
+          - aws-vault
+          - notunes
