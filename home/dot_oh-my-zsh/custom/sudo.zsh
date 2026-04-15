@@ -3,3 +3,9 @@
 # One alias to use them all
 alias sudoa='sudo '
 # Seems useless? If the last character of the alias value is a blank, then the next command word following the alias is also checked for alias expansion.
+
+{{- if .work }}
+
+alias sudo="/Applications/Privileges.app/Contents/MacOS/PrivilegesCLI -a && /usr/bin/sudo"
+
+{{- end }}
