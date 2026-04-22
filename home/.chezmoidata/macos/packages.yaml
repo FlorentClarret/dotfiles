@@ -36,6 +36,7 @@ packages:
         personal:
           - ffmpeg
         work:
+          - anomalyco/tap/opencode
           - fx
           - hmarr/tap/codeowners
           - pinentry-mac
@@ -58,7 +59,7 @@ packages:
           - kubectl
       casks:
         base:
-          - 1password/tap/1password-cli
+          - 1password-cli
           - battery
           - ghostty
           - raycast
