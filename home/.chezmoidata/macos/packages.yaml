@@ -33,6 +33,7 @@ packages:
           - docker
           - wget
           - gnu-tar
+          - opencode
         personal:
           - ffmpeg
         work:
