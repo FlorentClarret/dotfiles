@@ -15,3 +15,5 @@ http_unix_socket:
 # What web browser gh should use when opening URLs. If blank, will refer to environment.
 browser:
 version: "1"
+# https://cli.github.com/telemetry
+telemetry: disabled
