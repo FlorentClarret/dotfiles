@@ -116,4 +116,6 @@ fi
 
 export GPG_TTY=$(tty)
 
+export DO_NOT_TRACK=true
+
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
