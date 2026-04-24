@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+alias oc='opencode'
+
 #compdef opencode
 ###-begin-opencode-completions-###
 #
