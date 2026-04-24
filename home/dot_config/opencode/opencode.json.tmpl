@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "permission": {
+    "edit": "ask",
+    "webfetch": "ask",
+    "doom_loop": "ask",
+    "external_directory": "ask",
+    "bash": {
+      "*": "ask",
+      "pwd": "allow",
+      "git status": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git diff *": "allow",
+      "git blame *": "allow",
+      "gh pr view *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "ls *": "allow",
+      "tail *": "allow",
+      "head *": "allow",
+      "cat *": "allow"
+    }
+  }
+  {{- if .work }}
+  ,"disabled_providers": ["opencode"]
+  ,"plugin": ["git@github.com:DataDog/opencode-datadog.git"]
+  ,"mcp": {
+    "atlassian": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "datadog": {
+      "type": "remote",
+      "url": "https://mcp.datadoghq.com/api/unstable/mcp-server/mcp?toolsets=core,software-delivery"
+    },
+  }
+  {{- end -}}
+}
