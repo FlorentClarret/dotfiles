@@ -42,3 +42,4 @@
 - Don't mention CI-covered items (building, linting, tests passing)
 - NEVER merge any PR without explicit approval from me
 - Always use markdown hyperlinks in PR bodies ([Description](url) not bare URLs)
+- When pushing new commits to an existing PR, update the PR description to reflect the latest changes using `gh pr edit`.
