@@ -1,3 +1,1 @@
-/opt/beehmorw / opt / peon -
-  ping / libexec / adapters / opencode / peon -
-  ping.ts;
+/opt/homebrew/opt/peon-ping/libexec/adapters/opencode/peon-ping.ts
