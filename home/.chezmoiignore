@@ -12,6 +12,7 @@ Library
 
 {{ if .personal }}
 .claude
+.config/opencode/dd.json
 
 .config/git/gitconfig-work.toml
 
