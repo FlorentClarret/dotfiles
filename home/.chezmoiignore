@@ -11,7 +11,9 @@ Library
 {{ end }}
 
 {{ if .personal }}
-.claude
+.claude/rules
+.claude/skills
+
 .config/opencode/dd.json
 
 .config/git/gitconfig-work.toml

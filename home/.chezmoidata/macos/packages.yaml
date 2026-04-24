@@ -34,6 +34,7 @@ packages:
           - wget
           - gnu-tar
           - opencode
+          - PeonPing/tap/peon-ping
         personal:
           - ffmpeg
         work:
@@ -55,7 +56,6 @@ packages:
           - ykman
           - pipx
           - derailed/k9s/k9s
-          - PeonPing/tap/peon-ping
           - yamlfmt
           - kubectl
       casks:

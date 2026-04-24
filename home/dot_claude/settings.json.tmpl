@@ -123,8 +123,9 @@
         ]
       }
     ]
-  },
-  "enabledPlugins": {
+  }
+  {{- if .work -}}
+  ,"enabledPlugins": {
     "trajectory-capture@trajectory-cc-plugin": true,
     "trajectory-visualize@trajectory-cc-plugin": true,
     "appgate@datadog-claude-plugins": true,
@@ -139,4 +140,5 @@
       }
     }
   }
+  {{- end }}
 }
