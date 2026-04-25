@@ -35,6 +35,7 @@ packages:
           - gnu-tar
           - opencode
           - PeonPing/tap/peon-ping
+          - terminal-notifier
         personal:
           - ffmpeg
         work:
