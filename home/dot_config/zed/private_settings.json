@@ -40,7 +40,7 @@
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": true
+    "metrics": false
   },
   "base_keymap": "JetBrains",
   "icon_theme": "Zed (Default)",
