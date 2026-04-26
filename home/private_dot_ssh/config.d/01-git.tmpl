@@ -1,8 +1,7 @@
 Host github.com
   Hostname github.com
   User git
-  {{ if .work }}IdentityFile ~/.ssh/id_rsa{{ else }}IdentityFile ~/.ssh/github{{ end }}
-  IdentitiesOnly yes
+  {{- if .work }}IdentityFile ~/.ssh/id_rsa{{ end }}
 
 {{ if .work }}
 Host github-emu

@@ -8,14 +8,10 @@ Include config.d/03-external
 Host *                  # apply to all hosts
 # have the ssh command auto-add on first use
     AddKeysToAgent yes
-{{- if eq .chezmoi.os "darwin" }}
-# make --apple-use-keychain and --apple-load-keychain the default
-    UseKeychain yes
-{{- end }}
 {{- if eq .hostname .hostnames.work.m4 .hostnames.perso.latitude }}
     # IdentityFile ~/.ssh/id_rsa
 {{- else }}
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 {{- end }}
 
 {{- if .work }}
