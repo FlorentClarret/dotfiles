@@ -19,7 +19,7 @@
 
 ### Branches
 
-- When creating git branches, always prefix with "florent.clarret/" (e.g., "florent.clarret/feature-branch-name"). The feature-branch-name should be descriptive of the work being done in the branch (e.g., "florent.clarret/add-new-api-endpoint").
+- When creating git branches, always prefix with "florent.clarret/agent/" (e.g., "florent.clarret/agent/feature-branch-name"). The feature-branch-name should be descriptive of the work being done in the branch (e.g., "florent.clarret/agent/add-new-api-endpoint").
 - When creating git branches, always create them from the main branch. Always make sure to pull the latest changes from the main branch before creating a new branch to ensure that your branch is up to date with the latest codebase. This helps to minimize merge conflicts and ensures that your work is based on the most recent version of the code.
 
 ### Pushing
