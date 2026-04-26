@@ -16,6 +16,7 @@
 
 - When making commits, only include changes directly related to the task. Never commit unrelated formatting or whitespace changes alongside feature changes.
 - When user says 'commit and push' or 'open a PR', execute directly without extra exploration or test runs unless explicitly asked. Keep the workflow fast.
+- Never commit directly to main or master, unless allowed in the AGENTS.md file in the repository.
 
 ### Branches
 
