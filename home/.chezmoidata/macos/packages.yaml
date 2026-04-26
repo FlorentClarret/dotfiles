@@ -36,6 +36,7 @@ packages:
           - opencode
           - PeonPing/tap/peon-ping
           - terminal-notifier
+          - ollama
         personal:
           - ffmpeg
         work:
