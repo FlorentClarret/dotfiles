@@ -1,4 +1,4 @@
-{{- $hosts := list "lightning" "latitude" "mac-mini" "windows" -}}
+{{- $hosts := list "lightning" "mac-mini" "windows" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 {{ onepasswordRead  (print "op://network/" . "/public key") $.onepassword.perso }}
 {{ end -}}
