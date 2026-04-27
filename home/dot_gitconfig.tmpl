@@ -117,9 +117,6 @@
 [url "git@gitlab.com:"]
     insteadOf = https://gitlab.com/
 
-[gpg]
-    program = /opt/homebrew/bin/gpg
-
 [commit]
     gpgsign = true
 
@@ -139,16 +136,5 @@
     autoupdate = true
     enabled = true
 
-{{ if .work }}
 [include]
-    path = .config/git/gitconfig-work.toml
-
-[includeIf "gitdir:~/Documents/Personal/**"]
-    path = .config/git/gitconfig-perso.toml
-
-[includeIf "gitdir:~/.local/share/chezmoi/**"]
-    path = .config/git/gitconfig-perso.toml
-{{ else }}
-[include]
-    path = .config/git/gitconfig-perso.toml
-{{ end }}
+    path = .config/git/gitconfig-{{ if .work }}work{{ else }}perso{{ end }}.toml
