@@ -11,7 +11,7 @@ if [[ -f ~/.ssh/config ]]; then
   done
 fi
 
-{{- if .work -}}
+{{ if .work -}}
 
 start_agent() {
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
