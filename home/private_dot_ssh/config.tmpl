@@ -8,9 +8,7 @@ Include config.d/03-external
 Host *                  # apply to all hosts
 # have the ssh command auto-add on first use
     AddKeysToAgent yes
-{{- if eq .hostname .hostnames.work.m4 }}
-    # IdentityFile ~/.ssh/id_rsa
-{{- else }}
+{{- .personal }}
     IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 {{- end }}
 
