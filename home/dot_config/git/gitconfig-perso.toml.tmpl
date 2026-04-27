@@ -3,7 +3,7 @@
 {{- if eq .hostname .hostnames.work.m4 }}
     signingkey = {{ .key.perso.m4 }}
 {{- else if eq .hostname .hostnames.perso.macbook }}
-    signingkey = {{ onepasswordRead (print "op://private/MacBookPro M1/public key") $.onepassword.perso }}
+    signingkey = {{ onepasswordRead (print "op://private/MacBookPro M1/public key") $.email.perso }}
 {{ end }}
 
 [gpg]
