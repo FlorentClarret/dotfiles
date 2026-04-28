@@ -1,7 +1,7 @@
 [user]
     email = {{ .email.perso }}
 {{- if eq .hostname .hostnames.work.m4 }}
-    signingkey = { onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
+    signingkey = {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
 {{- else if eq .hostname .hostnames.perso.macbook }}
     signingkey = {{ onepasswordRead (print "op://private/MacBookPro M1/public key") $.email.perso }}
 {{ end }}
