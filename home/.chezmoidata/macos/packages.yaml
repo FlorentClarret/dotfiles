@@ -43,7 +43,6 @@ packages:
           - anomalyco/tap/opencode
           - fx
           - hmarr/tap/codeowners
-          - pinentry-mac
           - withgraphite/tap/graphite
           - clang-format
           - node
