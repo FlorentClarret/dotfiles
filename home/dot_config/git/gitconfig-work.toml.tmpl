@@ -1,6 +1,6 @@
 [user]
     email = {{ .email.work }}
-    signingkey = {{ .key.work.primary }}
+    signingkey = {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
 
 [url "git@github-emu:ddoghq/"]
     insteadOf = git@github.com:ddoghq/
@@ -8,10 +8,7 @@
 [url "git@github-emu:florent-clarret_ddog/"]
     insteadOf = git@github.com:florent-clarret_ddog/
 
-[gpg]
-    program = /opt/homebrew/bin/gpg
-
-[includeIf "gitdir:~/Documents/Personal/**"]
+[includeIf "gitdir:~/Documents/Perso/**"]
     path = .config/git/gitconfig-perso.toml
 
 [includeIf "gitdir:~/.local/share/chezmoi/**"]
