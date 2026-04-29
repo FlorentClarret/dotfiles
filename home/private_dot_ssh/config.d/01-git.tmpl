@@ -1,17 +1,11 @@
 Host github.com
   Hostname github.com
   User git
-{{- if .work }}
-  IdentityFile ~/.ssh/1Password/SHA256_Z7LRWnPjvMbspyx7y8c2hUJStg7L5xW9DOdZxBKy4fw.pub
-  IdentitiesOnly yes
-{{ end }}
 
 {{ if .work }}
 Host github-emu
   Hostname github.com
   User git
-  IdentityFile ~/.ssh/1Password/SHA256_3ra1mdlolapl+tA5oMDN6xQN2E987HRotdYxU4BYvz8.pub
-  IdentitiesOnly yes
 {{ end }}
 
 Host gitlab.com

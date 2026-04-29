@@ -1,5 +1,9 @@
 HashKnownHosts yes
 
+{{- if .work }}
+Include 1Password/config
+{{- end }}
+
 Include config.d/00-default
 Include config.d/01-git
 Include config.d/02-home
