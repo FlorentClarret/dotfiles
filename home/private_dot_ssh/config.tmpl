@@ -9,11 +9,6 @@ Include config.d/01-git
 Include config.d/02-home
 Include config.d/03-external
 
-Host *                  # apply to all hosts
-# have the ssh command auto-add on first use
-    AddKeysToAgent yes
-    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-
 Include ~/.colima/ssh_config
 
 {{- if .work }}
