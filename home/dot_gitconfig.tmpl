@@ -117,6 +117,7 @@
 [url "git@gitlab.com:"]
     insteadOf = https://gitlab.com/
 
+{{ if .macos }}
 [commit]
     gpgsign = true
 
@@ -125,6 +126,7 @@
 
 [gpg "ssh"]
     program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+{{ end }}
 
 [tag]
     forceSignAnnotated = true

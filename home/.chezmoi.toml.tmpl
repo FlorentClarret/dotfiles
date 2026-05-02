@@ -2,6 +2,7 @@
 
 {{/* boolean feature tags */}}
 {{- $personal := true -}}
+{{- $macos := false -}}
 {{- "" -}}
 
 {{/* work around unreliable hostname on darwin */}}
@@ -9,6 +10,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
 {{-   $hostname = $computerName -}}
+{{-   $macos = true -}}
 {{- end -}}
 
 {{- if eq $hostname "COMP_G1V603QMGK" -}}
@@ -19,6 +21,7 @@
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
     work = {{ not $personal }}
+    macos = {{ $macos }}
 
 [data.email]
     perso = "florent.clarret@gmail.com"

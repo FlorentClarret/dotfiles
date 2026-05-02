@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 
-{{ if ne .chezmoi.os "darwin" }}
+{{ if not .macos }}
 alias open='xdg-open'
 {{ end }}

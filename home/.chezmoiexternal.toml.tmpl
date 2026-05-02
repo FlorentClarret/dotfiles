@@ -34,6 +34,7 @@
     stripComponents = 2
     refreshPeriod = "168h"
     include = ["*/scripts/**"]
+{{ if .macos }}
 [".config/raycast_scripts"]
     type = "archive"
     url = "https://github.com/FlorentClarret/raycast-scripts/archive/main.tar.gz"
@@ -41,3 +42,4 @@
     stripComponents = 2
     refreshPeriod = "168h"
     include = ["*/src/**"]
+{{ end }}

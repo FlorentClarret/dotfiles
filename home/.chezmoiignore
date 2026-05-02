@@ -4,7 +4,7 @@ README.md
 .gitmodules
 .DS_Store*
 
-{{ if ne .chezmoi.os "darwin" }}
+{{ if not .macos }}
 .chezmoiscripts/macos/**
 Library
 .oh-my-zsh/custom/brew.zsh
@@ -12,6 +12,8 @@ Library
 .Brewfile
 
 .aerospace.toml
+# For now, just contains a symlink that is macos-specifc
+.1Password
 {{ end }}
 
 {{ if .personal }}
