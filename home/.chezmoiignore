@@ -8,6 +8,10 @@ README.md
 .chezmoiscripts/macos/**
 Library
 .oh-my-zsh/custom/brew.zsh
+
+.Brewfile
+
+.aerospace.toml
 {{ end }}
 
 {{ if .personal }}
