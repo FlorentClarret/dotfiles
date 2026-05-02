@@ -70,6 +70,7 @@ packages:
         personal:
           - balenaetcher
           - vlc
+          - transmission
         work:
           - aws-vault
           - notunes
