@@ -75,3 +75,6 @@ packages:
         work:
           - aws-vault
           - notunes
+          - ddd
+          - datadog/tap/atlas
+          - datadog/tap/ddtool
