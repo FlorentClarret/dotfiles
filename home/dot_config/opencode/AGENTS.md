@@ -44,3 +44,4 @@
 - NEVER merge any PR without explicit approval from me
 - Always use markdown hyperlinks in PR bodies ([Description](url) not bare URLs)
 - When pushing new commits to an existing PR, update the PR description to reflect the latest changes using `gh pr edit`.
+- After successfully creating or opening a PR, always run `open <pr_url>` to open it in the browser.
