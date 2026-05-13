@@ -9,6 +9,7 @@
     "bash": {
       "*": "ask",
       "pwd": "allow",
+      "git checkout *": "allow",
       "git status": "allow",
       "git log *": "allow",
       "git show *": "allow",
@@ -20,7 +21,8 @@
       "ls *": "allow",
       "tail *": "allow",
       "head *": "allow",
-      "cat *": "allow"
+      "cat *": "allow",
+      "open *": "allow",
     }
   }
   {{- if .work }}
