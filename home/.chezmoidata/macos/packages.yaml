@@ -59,6 +59,7 @@ packages:
           - derailed/k9s/k9s
           - yamlfmt
           - kubectl
+          - pandoc
       casks:
         base:
           - spotify
