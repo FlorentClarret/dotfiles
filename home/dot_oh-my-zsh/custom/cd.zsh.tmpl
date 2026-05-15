@@ -25,7 +25,7 @@ alias cddd='cd ~/dd'
 if [[ -d ~/dd ]]; then
   for dir in $(ls ~/dd/); do
     if [[ -d ~/dd/$dir ]]; then
-      eval alias "$dir=\"cd ~/dd/$dir\""
+      eval alias "cd$dir=\"cd ~/dd/$dir\""
     fi
   done
 fi
