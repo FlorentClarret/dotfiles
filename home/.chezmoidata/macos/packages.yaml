@@ -78,4 +78,5 @@ packages:
           - ddd
           - datadog/tap/atlas
           - datadog/tap/ddtool
+          - datadog/tap/dd-auth
           - dda
