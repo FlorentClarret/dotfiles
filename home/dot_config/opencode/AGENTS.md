@@ -16,12 +16,12 @@
 
 - When making commits, only include changes directly related to the task. Never commit unrelated formatting or whitespace changes alongside feature changes.
 - When user says 'commit and push' or 'open a PR', execute directly without extra exploration or test runs unless explicitly asked. Keep the workflow fast.
-- Never commit directly to main or master, unless allowed in the AGENTS.md file in the repository.
+- Only allowed to commit on branches prefixed with `florent.clarret/agent/`.
 
 ### Branches
 
 - When creating git branches, always prefix with "florent.clarret/agent/" (e.g., "florent.clarret/agent/feature-branch-name"). The feature-branch-name should be descriptive of the work being done in the branch (e.g., "florent.clarret/agent/add-new-api-endpoint").
-- When creating git branches, always create them from the main branch. Always make sure to pull the latest changes from the main branch before creating a new branch to ensure that your branch is up to date with the latest codebase. This helps to minimize merge conflicts and ensures that your work is based on the most recent version of the code.
+- When creating git branches, always create them from the main branch. Always make sure to pull the latest changes from the main branch before creating a new branch to ensure that your branch is up to date with the latest codebase.
 
 ### Pushing
 
@@ -43,5 +43,5 @@
 - Don't mention CI-covered items (building, linting, tests passing)
 - NEVER merge any PR without explicit approval from me
 - Always use markdown hyperlinks in PR bodies ([Description](url) not bare URLs)
-- When pushing new commits to an existing PR, update the PR description to reflect the latest changes using `gh pr edit`.
+- When pushing new commits to an existing PR, update the PR title and description to reflect the latest changes using `gh pr edit`.
 - After successfully creating or opening a PR, always run `open <pr_url>` to open it in the browser.
