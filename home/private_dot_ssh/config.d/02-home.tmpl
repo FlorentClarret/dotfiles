@@ -1,8 +1,8 @@
 {{- $hosts := list "router" "helios" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 Host {{ . }}
-    HostName {{ onepasswordRead  (print "op://network/" . "/url") $.email.perso }}
-    User {{ onepasswordRead (print "op://network/" . "/username") $.email.perso }}
-    Port {{ onepasswordRead (print "op://network/" . "/port") $.email.perso }}
+    HostName {{ onepasswordRead  (print "op://qfuvepty7mc4y5x5mrk6gwuq6u/" . "/url") $.email.perso }}
+    User {{ onepasswordRead (print "op://qfuvepty7mc4y5x5mrk6gwuq6u/" . "/username") $.email.perso }}
+    Port {{ onepasswordRead (print "op://qfuvepty7mc4y5x5mrk6gwuq6u/" . "/port") $.email.perso }}
 
 {{ end -}}

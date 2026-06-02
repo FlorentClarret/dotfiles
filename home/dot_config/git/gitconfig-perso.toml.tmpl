@@ -3,5 +3,5 @@
 {{- if eq .hostname .hostnames.m4 }}
     signingkey = {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
 {{- else if eq .hostname .hostnames.macbook }}
-    signingkey = {{ onepasswordRead (print "op://private/MacBookPro M1/public key") $.email.perso }}
+    signingkey = {{ onepasswordRead (print "op://qcnhjk5jdsit72oey2qxmgjufu/yekdn6lua4zshprcg4ipr5g3pu/public key") $.email.perso }}
 {{ end }}
