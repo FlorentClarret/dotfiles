@@ -60,6 +60,7 @@ packages:
           - yamlfmt
           - kubectl
           - pandoc
+          - heroku/brew/heroku
       casks:
         base:
           - spotify
