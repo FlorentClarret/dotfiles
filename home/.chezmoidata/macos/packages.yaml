@@ -80,4 +80,5 @@ packages:
           - datadog/tap/atlas
           - datadog/tap/ddtool
           - datadog/tap/dd-auth
+          - datadog/tap/dd-sts
           - dda
