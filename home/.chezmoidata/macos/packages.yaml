@@ -74,7 +74,7 @@ packages:
           - vlc
           - transmission
         work:
-          - aws-vault
+          - aws-vault-binary
           - notunes
           - ddd
           - datadog/tap/atlas
