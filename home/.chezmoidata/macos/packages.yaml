@@ -16,6 +16,7 @@ packages:
           - gnupg
           - jq
           - yq
+          - mq
           - mc
           - most
           - pv
