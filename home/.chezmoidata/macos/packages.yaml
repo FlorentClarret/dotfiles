@@ -39,6 +39,7 @@ packages:
         personal:
           - ffmpeg
         work:
+          - dive
           - anomalyco/tap/opencode
           - fx
           - hmarr/tap/codeowners
