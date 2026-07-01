@@ -12,6 +12,13 @@
 
 ## Git
 
+{{ if .work }}
+### GitHub Account
+
+- For repositories in the `ddoghq` GitHub org, always use the `florent-clarret_ddog` GitHub account (run `gh auth switch --user florent-clarret_ddog` before any `gh` commands).
+- For all other repositories, use the `FlorentClarret` account.
+{{ end }}
+
 ### Commits
 
 - When making commits, only include changes directly related to the task. Never commit unrelated formatting or whitespace changes alongside feature changes.
