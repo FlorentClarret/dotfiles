@@ -3,15 +3,15 @@
   "volume": 0.5,
   "enabled": true,
   "categories": {
-    "session.start": true,
-    "session.end": true,
-    "task.acknowledge": true,
+    "session.start": false,
+    "session.end": false,
+    "task.acknowledge": false,
     "task.complete": true,
     "task.error": true,
-    "task.progress": true,
+    "task.progress": false,
     "input.required": true,
     "resource.limit": true,
-    "user.spam": true
+    "user.spam": false
   },
   "spam_threshold": 3,
   "spam_window_seconds": 10,
