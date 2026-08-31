@@ -1,2 +1,7 @@
+{{- if eq .hostname .hostnames.m4 }}
 {{ onepasswordRead (print "op://private/MacBookPro M4 - ddoghq/email") $.email.work }} namespaces="git" {{ onepasswordRead (print "op://private/MacBookPro M4 - ddoghq/public key") $.email.work }}
 {{ onepasswordRead (print "op://private/MacBookPro M4/email") $.email.work }} namespaces="git" {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
+{{ $.email.perso }} namespaces="git" {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
+{{- else if eq .hostname .hostnames.macbook }}
+{{ $.email.perso }} namespaces="git" {{ onepasswordRead (print "op://qcnhjk5jdsit72oey2qxmgjufu/yekdn6lua4zshprcg4ipr5g3pu/public key") $.email.perso }}
+{{- end }}
