@@ -1,27 +1,24 @@
+{{- $orgs := list "ddoghq" "florent-clarret_ddog" -}}
+{{- $remotePatterns := list "git@github.com:%s/**" "git@github-emu:%s/**" "ssh://git@github.com/%s/**" "ssh://git@github-emu/%s/**" "https://github.com/%s/**" -}}
 [user]
     email = {{ .email.work }}
     signingkey = {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
 
 [gpg "ssh"]
-	allowedSignersFile = .config/git/allowed_signers
-
-[url "git@github-emu:ddoghq/"]
-    insteadOf = git@github.com:ddoghq/
-
-[url "git@github-emu:florent-clarret_ddog/"]
-    insteadOf = git@github.com:florent-clarret_ddog/
-
+	allowedSignersFile = ~/.config/git/allowed_signers
+{{ range $org := $orgs }}
+[url "git@github-emu:{{ $org }}/"]
+    insteadOf = git@github.com:{{ $org }}/
+{{ end }}
 [includeIf "gitdir:~/Documents/Perso/**"]
-    path = .config/git/gitconfig-perso.toml
+    path = ~/.config/git/gitconfig-perso.toml
 
 [includeIf "gitdir:~/.local/share/chezmoi/**"]
-    path = .config/git/gitconfig-perso.toml
+    path = ~/.config/git/gitconfig-perso.toml
 
-[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq/**"]
-    path = .config/git/gitconfig-work-ddoghq.toml
-[includeIf "hasconfig:remote.*.url:git@github-emu:ddoghq//**"]
-    path = .config/git/gitconfig-work-ddoghq.toml
-[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
-    path = .config/git/gitconfig-work-ddoghq.toml
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq/**"]
-    path = .config/git/gitconfig-work-ddoghq.toml
+{{ range $org := $orgs -}}
+{{ range $pattern := $remotePatterns -}}
+[includeIf "hasconfig:remote.*.url:{{ printf $pattern $org }}"]
+    path = ~/.config/git/gitconfig-work-ddoghq.toml
+{{ end -}}
+{{ end -}}
