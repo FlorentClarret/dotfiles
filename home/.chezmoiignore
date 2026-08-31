@@ -23,6 +23,7 @@ Library
 .config/opencode/dd.json
 
 .config/git/gitconfig-work.toml
+.config/git/allowed_signers
 
 .oh-my-zsh/custom/aws-vault.zsh
 .oh-my-zsh/custom/kubectl.zsh
