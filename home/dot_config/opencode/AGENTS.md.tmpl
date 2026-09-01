@@ -15,8 +15,9 @@
 {{ if .work }}
 ### GitHub Account
 
-- For repositories in the `ddoghq` GitHub org, always use the `florent-clarret_ddog` GitHub account (run `gh auth switch --user florent-clarret_ddog` before any `gh` commands).
-- For all other repositories, use the `FlorentClarret` account.
+- By default, run `gh` without any account flag: a local shell wrapper already picks the right account based on the current repository.
+- Only when explicitly targeting a specific org (e.g. querying data outside the current repository), force the account with the `--gh-account` flag: `--gh-account florent-clarret_ddog` for the `ddoghq` org, `--gh-account FlorentClarret` otherwise (e.g. `gh --gh-account florent-clarret_ddog pr list --repo ddoghq/some-repo`). The flag is consumed by the wrapper and never forwarded to the real `gh` command.
+- Never use `gh auth switch`.
 {{ end }}
 
 ### Commits

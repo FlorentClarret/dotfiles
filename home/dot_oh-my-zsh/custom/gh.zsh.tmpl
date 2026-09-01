@@ -1,0 +1,49 @@
+#!/usr/bin/env zsh
+
+eval "$(gh completion -s zsh)"
+
+{{ if .work }}
+# Inspired by https://github.com/cli/cli/issues/12459
+gh() {
+  local gh_account=""
+  local -a args=()
+
+  # --gh-account is consumed here and never forwarded to the real gh command
+  while (( $# )); do
+    case "$1" in
+      --gh-account)
+        if [[ -z "$2" ]]; then
+          echo "gh: --gh-account requires an account name" >&2
+          return 1
+        fi
+        gh_account="$2"
+        shift 2
+        ;;
+      --gh-account=*)
+        gh_account="${1#--gh-account=}"
+        if [[ -z "$gh_account" ]]; then
+          echo "gh: --gh-account requires an account name" >&2
+          return 1
+        fi
+        shift
+        ;;
+      *)
+        args+=("$1")
+        shift
+        ;;
+    esac
+  done
+
+  if [[ -z "$gh_account" ]]; then
+    gh_account=$(git config github.account 2>/dev/null)
+  fi
+
+  if [[ -n "$gh_account" ]]; then
+    if ! command gh auth status 2>&1 | grep -q "$gh_account.*Active account: true"; then
+      command gh auth switch --user "$gh_account" &>/dev/null
+    fi
+  fi
+
+  command gh "${args[@]}"
+}
+{{ end }}

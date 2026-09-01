@@ -144,5 +144,11 @@
     autoupdate = true
     enabled = true
 
+# Custom configuration to automatically switch from one GitHub account to the other.
+# Works in pair with the `gh` function defined in ~/.oh-my-zsh/custom/gh.zsh
+# https://github.com/cli/cli/issues/12459
+[github]
+	account = FlorentClarret
+
 [include]
     path = .config/git/gitconfig-{{ if .work }}work{{ else }}perso{{ end }}.toml
