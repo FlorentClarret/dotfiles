@@ -3,7 +3,13 @@
 eval "$(gh completion -s zsh)"
 
 {{ if .work }}
+# Wrapper around `gh` that auto-selects the GitHub account to use.
 # Inspired by https://github.com/cli/cli/issues/12459
+#
+# Account resolution order:
+#   1. --gh-account <name> / --gh-account=<name>  (wrapper-only, stripped before exec)
+#   2. `git config github.account` for the current repository
+#   3. whatever account gh currently has active
 gh() {
   local gh_account=""
   local -a args=()
