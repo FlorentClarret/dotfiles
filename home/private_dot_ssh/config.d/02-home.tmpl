@@ -1,4 +1,4 @@
-{{- $hosts := list "router" "helios" -}}
+{{- $hosts := list "router" "helios" "helios-locked" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 Host {{ . }}
     HostName {{ onepasswordRead  (print "op://qfuvepty7mc4y5x5mrk6gwuq6u/" . "/url") $.email.perso }}
