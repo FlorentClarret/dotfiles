@@ -1,5 +1,6 @@
 {{- $orgs := list "ddoghq" "florent-clarret_ddog" -}}
 {{- $remotePatterns := list "git@github.com:%s/**" "git@github-emu:%s/**" "ssh://git@github.com/%s/**" "ssh://git@github-emu/%s/**" "https://github.com/%s/**" -}}
+{{- $personalFolders := list "~/Documents/Perso/**" "~/.local/share/chezmoi/**" -}}
 [user]
     email = {{ .email.work }}
     signingkey = {{ onepasswordRead (print "op://private/MacBookPro M4/public key") $.email.work }}
@@ -10,11 +11,11 @@
 [url "git@github-emu:{{ $org }}/"]
     insteadOf = git@github.com:{{ $org }}/
 {{ end }}
-[includeIf "gitdir:~/Documents/Perso/**"]
-    path = ~/.config/git/gitconfig-perso.toml
 
-[includeIf "gitdir:~/.local/share/chezmoi/**"]
+{{- range $folder := $personalFolders }}
+[includeIf "gitdir:{{ $folder }}"]
     path = ~/.config/git/gitconfig-perso.toml
+{{- end }}
 
 {{ range $org := $orgs -}}
 {{ range $pattern := $remotePatterns -}}
