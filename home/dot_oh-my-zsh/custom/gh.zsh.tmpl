@@ -45,9 +45,14 @@ gh() {
   fi
 
   if [[ -n "$gh_account" ]]; then
-    if ! command gh auth status 2>&1 | grep -q "$gh_account.*Active account: true"; then
-      command gh auth switch --user "$gh_account" &>/dev/null
+    local gh_token
+    if ! gh_token=$(command gh auth token --user "$gh_account" 2>/dev/null) || [[ -z "$gh_token" ]]; then
+      echo "gh: no token found for account '$gh_account'" >&2
+      return 1
     fi
+
+    GH_TOKEN="$gh_token" command gh "${args[@]}"
+    return $?
   fi
 
   command gh "${args[@]}"
